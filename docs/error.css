@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #f4f4f9, #e6f7ff);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: burlywood;
+}
+
+.error-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 90%;
+    max-width: 500px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.error-code {
+    font-size: 26px;
+    color: #d9534f;
+    margin-bottom: 20px;
+}
+
+.error-message {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.custom-button {
+    background-color: #4CAF50;
+    border: none;
+    color: #fff;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform .3s ease, box-shadow .3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+.custom-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+    background-color: #45a049;
+}
+
+.icon-refresh{
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    margin-right: 10px;
+    vertical-align: middle;
+    fill: #fff;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .error-card {
+        padding: 20px;
+    }
+
+    .error-code {
+        font-size: 36px;
+    }
+
+    .error-message {
+        font-size: 16px;
+    }
+
+    .custom-button {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+}
