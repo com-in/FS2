@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!----------本HTML页面按照项目开源协议开源（GPLv3）---------->
+<!----------严禁格式化---------->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale="1.0">
+    <meta name="description" content="Filesafe2 - 文件保护助手2官网">
+    <meta name="keywords" content="文件保护助手2, 文件保护, 安全, 高效, 可靠, 文件加密">
+    <title>文件保护助手2官网</title>
+    <link rel="icon" href="https://www.helloimg.com/i/2025/04/极
+    06/67f171c23cdbb.ico" type="image/x-icon">
+    
+    <!-- CSS 样式 -->
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, rgba(58, 255, 140, 0.8), rgba(52, 152, 219, 0.8));
+            color: #333;
+        }
+        
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .top-bar-left {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .nav-menu ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            gap: 25px;
+        }
+        
+        .nav-menu li {
+            position: relative;
+        }
+        
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        
+        .nav-menu a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+        
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 40px 0;
+            background-image: url('https://www.helloimg.com/i/2025/04/06/67f17036d7087.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero h3 {
+            font-size: 1.5em;
+            margin-top: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .version-tag {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        
+        .card {
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+        }
+        
+        .card h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        /* 公告轮播样式 */
+        .announcement-carousel {
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+        }
+        
+        .announcement-container {
+            display: flex;
+            transition: transform 0.5s ease;
+            height: 100%;
+        }
+        
+        .announcement {
+            min-width: 100%;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            border-radius: 3px;
+            box-sizing: border-box;
+        }
+        
+        .announcement p.date {
+            color: #7f8c8d;
+            font-size: 0.9em;
+            margin-top: 10px;
+            text-align: right;
+        }
+        
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+            gap: 20px;
+        }
+        
+        .carousel-control {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #3498db;
+            cursor: pointer;
+            padding: 5px 15px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            background-color: #2c3e50;
+            color: white;
+            border-radius: 5px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .top-bar {
+                flex-direction: column;
+                text-align: center;
+                padding: 15px;
+            }
+            
+            .nav-menu ul {
+                flex-direction: column;
+                margin-top: 15px;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <header class="top-bar">
+            <div class="top-bar-left">
+                <span>文件保护助手2</span>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="#0">首页</a></li>
+                    <li><a href="#1">公告</a></li>
+                    <li><a href="#3">软件简介</a></li>
+                    <li><a href="#4">规则</a></li>
+                    <li><a href="#5">团队</a></li>
+                </ul>
+            </div>
+        </header>
+        
+        <main class="container">
+            <section class="hero" id="0">
+                <h2>文件保护助手2 - 加密您的文件</h2>
+                <h3>安全、高效、可靠</h3>
+                <div class="version-tag">实时版本：<span id="liveVersion">加载中...</span></div>
+            </section>
+
+            <section class="card" id="download-section">
+                <h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 3v12m-7 1h14l-7-7-7 7z"></path>
+                    </svg>
+                    下载
+                </h2>
+                <button id="downloadButton">下载</button>
+            </section>
+
+            <section class="card announcements" id="1">
+                <h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                    </svg>
+                    开发者公告
+                </h2>
+                <div class="announcement-carousel">
+                    <div class="announcement-container">
+                        <div class="announcement">
+                            <p><strong>【新版发布】软件公告</strong></p>
+                            <hr>
+                            <p>
+                                软件版本更新至Ver.2大版本！
+                            </p>
+                            <p class="date">发布时间：2025/03/29 18:45</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-control prev">◀</button>
+                    <button class="carousel-control next">▶</button>
+                </div>
+            </section>
+
+            <section class="card server-info" id="3">
+                <h2>
+                    <svg xmlns="http://www.w3.org/2000/svg极
+                    " width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12极
+                        " r="10"></circle>
+                        <line x1="12" y1="16" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                    </svg>
+                    软件简介
+                </h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px;">
+                    <div>
+                        <h3>软件特色</h3>
+                        <p>文件保护助手2提供用户友好的操作界面和丰富的文件保护功能，确保您的文件安全无忧。</p>
+                    </div>
+                    
+                    <div>
+                        <h3>功能介绍</h3>
+                        <p>保护文件不受侵害、保护个人隐私，全方位保护您的文件安全。</p>
+                    </div>
+                    
+                    <div>
+                        <h3>联系我们</h3>
+                        <p>您可以通过邮箱联系我们。邮箱地址：ctoyych0@gmail.com</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="card rules" id="4">
+                <h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                    使用须知
+                </h2>
+                
+                <ul style="list-style-type: none; padding: 0;">
+                    <li style="padding: 8px 0; border-bottom: 1px solid #eee;">1. 请遵循道德规范，不要破坏他人合法权益。</li>
+                    <li style="padding: 8px 0; border-bottom: 1px solid #eee;">2. 不得将软件用于非法用途。</li>
+                    <li style极
+                    ="padding: 8px 0; border-bottom: 1px solid #eee;">3. 如有问题请及时联系支持团队。</li>
+                </ul>
+            </section>
+            
+            <section class="card team-gallery" id="5">
+                <h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 极
+                    0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                    </svg>
+                    开发团队
+                </h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px;">
+                      <div style="padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
+                        <h4>Alice_Ctoy</h4>
+                        <p>软件开发，网站维护，域名提供</p>
+                    </div>
+                    
+                    <div style="padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
+                        <h4>期待加入</h4>
+                        <p>期待您的加入！</p>
+                    </div>
+                    
+                    <div style="padding: 15px; background-color: #f9f9f9; border-radius: 5px;">
+                        <h4>联系我们</h4>
+                        <p>您可以通过邮箱联系我们。邮箱地址：ctoyych0@gmail.com</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 Alice_Ctoy 保留所有权利.</p>
+        </footer>
+    </div>
+    
+    <script>
+        // 获取实时版本
+        fetch('https://fs.acmcdev.top/version.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('liveVersion').innerText = data.trim(); // 显示版本号
+            })
+            .catch(error => {
+                console.error('获取版本信息时出错:', error);
+                document.getElementById('liveVersion').innerText = '无法获取版本信息';
+            });
+
+        document.getElementById("downloadButton").addEventListener("click", function() {
+            window.location.href = "https://github.com/com-in/FS2/releases/latest";
+        });
+
+        // 公告轮播功能
+        const carousel = document.querySelector('.announcement-container');
+        const announcements = document.querySelectorAll('.announcement');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        let currentIndex = 0;
+        const total = announcements.length;
+
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + total) % total;
+            updateCarousel();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % total;
+            updateCarousel();
+        });
+
+        // 键盘左右键控制
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') {
+                currentIndex = (currentIndex - 1 + total) % total;
+                updateCarousel();
+            } else if (e.key === 'ArrowRight') {
+                currentIndex = (currentIndex + 1) % total;
+                updateCarousel();
+            }
+        });
+    </script>
+</body>
+</html>
