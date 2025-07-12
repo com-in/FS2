@@ -2,8 +2,8 @@
   
 <img src="https://github.com/user-attachments/assets/2058e18a-ff2d-4b97-94f9-38c845355792" width="75" height="75">
 
-<h3 style="font-size: 3.2rem; margin-bottom: 0.5rem;">Filesafe 2</h1>
-<h4 style="font-size: 2.6rem; margin-top: 0;">比 Filesafe 更加美观的文件加密软件</h2>
+<h2 style="font-size: 3.2rem; margin-bottom: 0.5rem;">Filesafe 2</h2>
+<h3 style="font-size: 2.6rem; margin-top: 0;">比 Filesafe 更加美观好用的文件加密软件</h3> </br>
 
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![易语言版本](https://img.shields.io/badge/易语言-5.9%2B-orange)](https://www.eyuyan.com/)
