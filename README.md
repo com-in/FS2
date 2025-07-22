@@ -11,11 +11,11 @@
 
 </div>
 
+> [!WARNING]
+> 本程序的宗旨为保护自己的文件，请勿通过此软件传播木马、病毒、外挂程序等违法或不符合道德规范的文件，一切责任由传播者自行负担，与本程序开发者，贡献者，以及本程序没有任何关联或责任。
+
 > [!IMPORTANT]
 > 因个人原因导致的任何问题与本软件、开发者无关
-
-> [!NOTE]
-> 本程序的宗旨为保护自己的文件，请勿通过此软件传播木马、病毒、外挂程序等违法或不符合道德规范的文件，一切责任由传播者自行负担，与本程序开发者，贡献者，以及本程序没有任何关联或责任。
 
 ### 如何使用
 #### 📦 获取软件
@@ -27,7 +27,7 @@
    <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" width="18" height="18"> Download Git for Win：https://git-scm.com/downloads/win </br>
    ```bash
    git clone https://github.com/com-in/FS2.git
-3. 使用易语言打开 **code/版本号/code/code.e** 并编译
+3. 使用易语言打开 **version/版本号/code/code.e** 并编译
 
 ### ❓ 常见问题
 ###### 1. 支持哪些Windows版本？</br>
