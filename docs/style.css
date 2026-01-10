@@ -1,0 +1,755 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    color: #2d3748;
+    background-color: #f7fafc;
+    overflow-x: hidden;
+}
+
+/* 导航栏样式 */
+header {
+    background-color: #ffffff;
+    color: #2d3748;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+header.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #2d3748;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.logo::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3182ce;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.logo:hover::after {
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 500;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #3182ce;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-links a:hover {
+    color: #3182ce;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* 语言切换按钮 */
+.language-switch {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.language-btn {
+    padding: 8px 15px;
+    background-color: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    color: #4a5568;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.language-btn:hover {
+    background-color: #f7fafc;
+    border-color: #cbd5e0;
+}
+
+.language-btn.active {
+    background-color: #4a5568;
+    color: white;
+    border-color: #4a5568;
+}
+
+/* 中英双语内容样式 */
+span.en, h1 .en, h2 .en, h3 .en, p .en, a .en {
+    display: none;
+}
+
+span.cn, h1 .cn, h2 .cn, h3 .cn, p .cn, a .cn {
+    display: block;
+}
+
+body.en span.en, body.en h1 .en, body.en h2 .en, body.en h3 .en, body.en p .en, body.en a .en {
+    display: block;
+}
+
+body.en span.cn, body.en h1 .cn, body.en h2 .cn, body.en h3 .cn, body.en p .cn, body.en a .cn {
+    display: none;
+}
+
+/* 移动端导航菜单 */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 2px;
+    background-color: #4a5568;
+    margin: 4px 0;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 2px;
+}
+
+/* 移动端菜单打开动画 */
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    background-color: #3182ce;
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    background-color: #3182ce;
+}
+
+/* 主要内容区域 */
+main {
+    max-width: 1200px;
+    margin: 80px auto 40px;
+    padding: 0 20px;
+}
+
+/* 首页Hero区域 */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+    color: #2d3748;
+    border: 1px solid #e2e8f0;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #2d3748;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #718096;
+    margin-bottom: 40px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+}
+
+.hero-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 30px;
+    background-color: #f7fafc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: #4a5568;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.hero-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* 按钮样式 */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 35px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    background-color: white;
+    color: #4a5568;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.btn:hover {
+    background-color: #f7fafc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.btn-primary {
+    background-color: #4a5568;
+    color: white;
+    border-color: #4a5568;
+}
+
+.btn-primary:hover {
+    background-color: #2d3748;
+    border-color: #2d3748;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #4a5568;
+    border: 1px solid #e2e8f0;
+}
+
+.btn-secondary:hover {
+    background-color: #f7fafc;
+    border-color: #cbd5e0;
+}
+
+/* 内容区块样式 */
+section {
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #2d3748;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+    animation: none;
+}
+
+.section-content {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.section-content:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* 功能卡片样式 */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background-color: white;
+    padding: 30px 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.feature-card:hover::before {
+    transform: scaleX(1);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #667eea;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    transform: scale(1.05) rotate(3deg);
+}
+
+.feature-card h3 {
+    font-size: 1.25rem;
+    color: #2d3748;
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+.feature-card p {
+    color: #718096;
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+/* 技术说明样式 */
+.tech-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tech-item {
+    background-color: white;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-left: 3px solid #667eea;
+}
+
+.tech-item:hover {
+    transform: translateX(8px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tech-item h3 {
+    font-size: 1.25rem;
+    color: #2d3748;
+    margin-bottom: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.tech-item h3::before {
+    content: '💡';
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.tech-item p {
+    color: #718096;
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.tech-item ul,
+.tech-item ol {
+    color: #718096;
+    margin-left: 20px;
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+.tech-item li {
+    margin-bottom: 6px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.tech-item li:hover {
+    color: #667eea;
+    transform: translateX(3px);
+}
+
+.tech-item h4 {
+    color: #2d3748;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* 下载区域样式 */
+.download-section {
+    text-align: center;
+    background-color: white;
+    padding: 64px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    color: #2d3748;
+    border: 1px solid #e2e8f0;
+}
+
+.download-section h2 {
+    font-size: 2rem;
+    color: #2d3748;
+    margin-bottom: 20px;
+}
+
+.download-section p {
+    font-size: 1.1rem;
+    color: #718096;
+    margin-bottom: 40px;
+    line-height: 1.7;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 16px 40px;
+    background-color: #4a5568;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 7px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #4a5568;
+}
+
+.download-button:hover {
+    background-color: #2d3748;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    border-color: #2d3748;
+}
+
+/* 关于页面样式 */
+.about-content {
+    background-color: white;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    border: 1px solid #e2e8f0;
+}
+
+.about-content:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.contact-info {
+    margin-top: 40px;
+    padding: 40px;
+    background-color: #f7fafc;
+    border-radius: 12px;
+    color: #2d3748;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+}
+
+.contact-info:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.contact-info h3 {
+    color: #2d3748;
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+}
+
+.contact-info p {
+    font-size: 1.25rem;
+    color: #718096;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.contact-info p .material-icons {
+    font-size: 1.4rem;
+    color: #4a5568;
+}
+
+/* GitHub按钮样式 */
+.github-section {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.github-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 16px 40px;
+    background-color: #4a5568;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #4a5568;
+}
+
+.github-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+    background-color: #2d3748;
+    border-color: #2d3748;
+}
+
+.github-button i {
+    margin-right: 12px;
+    font-size: 1.3rem;
+}
+
+/* 页脚样式 */
+footer {
+    background-color: white;
+    color: #2d3748;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    border-top: 1px solid #e2e8f0;
+}
+
+footer p {
+    margin: 0;
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #4a5568;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    color: #2d3748;
+    text-decoration: underline;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    /* 移动端导航 */
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        flex-direction: column;
+        background-color: #2c3e50;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Hero区域 */
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-image {
+        width: 120px;
+        height: 120px;
+        font-size: 3rem;
+    }
+
+    /* 按钮区域 */
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 功能卡片 */
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* 主要内容 */
+    main {
+        margin-top: 70px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-image {
+        width: 100px;
+        height: 100px;
+        font-size: 2.5rem;
+    }
+
+    .download-button {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+/* 动画效果 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero, .feature-card, .tech-item {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* 确保图标显示正常 */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/materialicons/v140/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}

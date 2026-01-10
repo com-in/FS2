@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文件保护助手 - 专业的DES文件加密工具</title>
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                <span class="cn">文件保护助手</span>
+                <span class="en">File Protection Assistant</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">
+                    <span class="cn">首页</span>
+                    <span class="en">Home</span>
+                </a></li>
+                <li><a href="features.html">
+                    <span class="cn">功能</span>
+                    <span class="en">Features</span>
+                </a></li>
+                <li><a href="download.html">
+                    <span class="cn">下载</span>
+                    <span class="en">Download</span>
+                </a></li>
+                <li><a href="about.html">
+                    <span class="cn">关于</span>
+                    <span class="en">About</span>
+                </a></li>
+            </ul>
+            <div class="language-switch">
+                <button class="language-btn active" data-lang="cn">中文</button>
+                <button class="language-btn" data-lang="en">English</button>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主要内容区域 -->
+    <main>
+        <!-- 首页Hero区域 -->
+        <section class="hero">
+            <div class="hero-image">
+                <img src="icon.ico" alt="文件保护助手图标" style="width: 100px; height: 100px; border-radius: 50%;">
+            </div>
+            <h1>
+                <span class="cn">文件保护助手</span>
+                <span class="en">File Protection Assistant</span>
+            </h1>
+            <p>
+                <span class="cn">专业的DES加密文件工具，为您的重要文件提供可靠的加密保护，确保数据安全。</span>
+                <span class="en">Professional DES encryption file tool, providing reliable encryption protection for your important files to ensure data security.</span>
+            </p>
+            <div class="cta-buttons">
+                <a href="download.html" class="btn btn-primary">
+                    <span class="cn">立即下载</span>
+                    <span class="en">Download Now</span>
+                </a>
+                <a href="https://github.com/com-in/FS2" target="_blank" class="btn btn-secondary">GitHub</a>
+            </div>
+        </section>
+
+        <!-- 核心功能预览 -->
+        <section>
+            <h2 class="section-title">
+                <span class="cn">核心功能</span>
+                <span class="en">Core Features</span>
+            </h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="material-icons feature-icon">security</span>
+                    <h3>
+                        <span class="cn">DES加密算法</span>
+                        <span class="en">DES Encryption Algorithm</span>
+                    </h3>
+                    <p>
+                        <span class="cn">采用经典的DES加密算法，确保文件在传输和存储过程中的安全性。</span>
+                        <span class="en">Using the classic DES encryption algorithm to ensure the security of files during transmission and storage.</span>
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <span class="material-icons feature-icon">file_copy</span>
+                    <h3>
+                        <span class="cn">简单易用</span>
+                        <span class="en">Easy to Use</span>
+                    </h3>
+                    <p>
+                        <span class="cn">直观的用户界面，只需几步即可完成文件加密和解密操作。</span>
+                        <span class="en">Intuitive user interface, complete file encryption and decryption in just a few steps.</span>
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <span class="material-icons feature-icon">shield</span>
+                    <h3>
+                        <span class="cn">数据安全</span>
+                        <span class="en">Data Security</span>
+                    </h3>
+                    <p>
+                        <span class="cn">加密后的文件只能通过正确的密钥解密，保护您的敏感信息不被泄露。</span>
+                        <span class="en">Encrypted files can only be decrypted with the correct key, protecting your sensitive information from leakage.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GitHub链接 -->
+        <section class="github-section">
+            <a href="https://github.com/com-in/FS2" target="_blank" class="github-button">
+                <i class="material-icons">code</i>
+                <span class="cn">在GitHub上查看源码</span>
+                <span class="en">View Source on GitHub</span>
+            </a>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>&copy; 2026 CMCS Studio. All rights reserved.</p>
+        <p style="margin-top: 5px;">&copy; 2026 CMCS Studio. 保留所有权利.</p>
+        <div style="margin-top: 10px;">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="privacy-policy.html">隐私政策</a>
+            <a href="https://github.com/com-in/FS2" target="_blank">GitHub</a>
+        </div>
+    </footer>
+
+    <!-- JavaScript代码 -->
+    <script>
+        // 移动端导航菜单切换
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        const header = document.querySelector('header');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuToggle.classList.toggle('active');
+        });
+
+        // 头部滚动效果
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // 关闭移动端菜单
+                    navLinks.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                }
+            });
+        });
+
+        // 点击外部关闭移动端菜单
+        document.addEventListener('click', (e) => {
+            if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+                navLinks.classList.remove('active');
+                menuToggle.classList.remove('active');
+            }
+        });
+
+        // 交叉观察器实现滚动动画
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // 观察所有需要动画的元素
+        document.querySelectorAll('.feature-card, .hero, .download-section, .about-content').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        // 语言切换功能
+        const languageBtns = document.querySelectorAll('.language-btn');
+        const body = document.body;
+
+        languageBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // 移除所有按钮的active类
+                languageBtns.forEach(b => b.classList.remove('active'));
+                // 为当前按钮添加active类
+                btn.classList.add('active');
+                // 切换body的语言类
+                const lang = btn.getAttribute('data-lang');
+                if (lang === 'en') {
+                    body.classList.add('en');
+                } else {
+                    body.classList.remove('en');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
