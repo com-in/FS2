@@ -2,7 +2,7 @@
 name: BUG 反馈
 about: 反馈您在使用中遇到的BUG
 title: "[BUG]"
-labels: 新提交, 错误
+labels: "· 错误, 新提交"
 assignees: com-in
 
 ---
