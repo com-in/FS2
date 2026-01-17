@@ -39,4 +39,5 @@
 加入QQ 群聊：[点击链接加入](https://qm.qq.com/q/GBm3Ql2eAk)
 
 ### 旧版本
-[文件保护助手](https://github.com/com-in/filesafe)是旧版本软件~~~别提了，代码质量不堪入目，大小毛病频出~~~
+[文件保护助手](https://github.com/com-in/filesafe)是旧版本软件</br>
+~别提了，代码质量不堪入目，大小毛病频出~
