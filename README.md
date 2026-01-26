@@ -3,13 +3,15 @@
 <img src="https://github.com/user-attachments/assets/2058e18a-ff2d-4b97-94f9-38c845355792" width="75" height="75">
 
 <h2 style="font-size: 3.2rem; margin-bottom: 0.5rem;">Filesafe 2</h2>
-<h3 style="font-size: 2.6rem; margin-top: 0;">比 Filesafe 更加美观好用的文件加密软件</h3> </br>
+<h3 style="font-size: 2.6rem; margin-top: 0;">较 Filesafe 更加美观好用的文件加密软件</h3> </br>
 
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![易语言版本](https://img.shields.io/badge/易语言-5.9%2B-orange)](https://www.eyuyan.com/)
 ![Platform](https://img.shields.io/badge/Platform-Windows-brightgreen)
 
 </div>
+
+#### 文件保护助手2周年！！感谢各位的支持
 
 > [!WARNING]
 > 本程序的宗旨为保护自己的文件，请勿通过此软件传播木马、病毒、外挂程序等违法或不符合道德规范的文件，一切责任由传播者自行负担，与本程序开发者，贡献者，以及本程序没有任何关联或责任。
